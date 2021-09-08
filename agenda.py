@@ -25,7 +25,7 @@ class Agenda:
     def get_contatos(self):
         return self.__contatos
 
-    def sdd_contatos(self, contatos):
+    def add_contatos(self, contatos):
         self.__contatos.append(contatos)
 
     def get_tarefa(self):
@@ -45,3 +45,4 @@ class Agenda:
 
     def get_tarefa(self, posicao_tarefa):
         return self.__tarefa[posicao_tarefa]
+
