@@ -5,7 +5,7 @@ from tarefa import Tarefa
 
 class Main:
 
-    def _init_(self):
+    def __init__(self):
         self.em_execucao = True
         self.agenda = Agenda()
         self.agenda.set_proprietario("hiuri")
@@ -17,13 +17,13 @@ class Main:
         print("A G EN D A  V I R T U A L")
         print("==========================")
         print("selecione uma opção: ")
-        print("1 Cadastrar contato")
+        print("1 Cadastrar contato: ")
         print("2. Listar contatos: ")
-        print("3. Excluir contato")
-        print("4. listar tarefas")
-        print("5. excluir tarefas:")
-        print("6. ")
-        print("0. Sair do programa")
+        print("3. Excluir contato: ")
+        print("4. listar tarefas: ")
+        print("5. Listar tarefa: ")
+        print("6. Excluir tarefa: ")
+        print("0. Sair do programa: ")
 
     def ler_opcao_menu(self):
         opcao = input("'>'")
@@ -60,7 +60,7 @@ class Main:
         contato.set_email(email)
         contato.set_cpf(cpf)
 
-        self.agenda.sdd_contato(contato)
+        self.agenda.add_contatos(contato)
         print("contato adicionado com sucesso")
 
     def cadastrar_tarefa(self):
@@ -85,7 +85,7 @@ class Main:
             print("lista de tarefas")
             tarefas_da_agenda = self.agenda.get_tarefa()
             for indice, contato in enumerate(contatos_da_agenda):
-                print("numero: " + str(indice) + ". - " + tarefa.get_descricao() + status "/" + tarefa.get_status()):
+                print("numero: " + str(indice) + ". - " + tarefa.get_descricao() + "status /" + tarefa.get_status())
 
 
     def listar_contato(self):
@@ -98,9 +98,9 @@ class Main:
         self.listar_contato()
         indice_para_excluir = input("digite o numero de ordem do contato: ")
 
-        try
+        try:
             contato_selecionado = self.agenda.get_contato(int(indice_para_excluir))
-        except
+        except:
             print("contato inválido")
             return
         self.agenda.remover_contato(contato_selecionado)
@@ -110,13 +110,11 @@ def excluir_tarefa(self):
         self.listar_tarefas()
         indice_para_excluir = input("digite o numero de ordem da tarefa: ")
 
-        try
+        try:
             tarefa_selecionada = self.agenda.tarefa(int(indice_para_excluir))
-        except
+        except:
             print("tarefa inválida")
             return
 
         self.agenda.remover_tarefa(contato_selecionado)
         print("tarefa Excluida com sucesso")
-
-
