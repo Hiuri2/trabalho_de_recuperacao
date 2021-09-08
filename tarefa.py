@@ -1,3 +1,4 @@
+  
 class Tarefa:
 
     def _init_(self):
@@ -11,7 +12,7 @@ class Tarefa:
     def set_descricao(self, descricao):
         self.__descricao = descricao
 
- def get_descricao(self):
+    def get_descricao(self):
         return self.__descricao
 
     def set_contato(self, contato):
