@@ -1,4 +1,4 @@
-from main import Main
+from classes.main import Main
 
 main = Main()
 
