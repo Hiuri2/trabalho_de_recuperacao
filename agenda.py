@@ -1,14 +1,10 @@
-from .contato import Contato
-from .tarefa import Tarefa
-
-
 class Agenda:
 
-    def _init_(self):
-        self.__proprietario = ""
+    def __init__(self):
+        self.__proprietario = ''
         self.__ano = 0
         self.__contatos = []
-        self.__tarefa = []
+        self.__tarefas = []
 
     def get_proprietario(self):
         return self.__proprietario
@@ -25,24 +21,23 @@ class Agenda:
     def get_contatos(self):
         return self.__contatos
 
-    def add_contatos(self, contatos):
-        self.__contatos.append(contatos)
+    def add_contato(self, contato):
+        self.__contatos.append(contato)
 
-    def get_tarefa(self):
-        return self.__tarefa
+    def get_tarefas(self):
+        return self.__tarefas
 
     def add_tarefa(self, tarefa):
-        self.__tarefa.append(tarefa)
+        self.__tarefas.append(tarefa)
 
-    def remover_contato(self,contato):
-        sel.__contato.remove(contato)
+    def remover_contato(self, contato):
+        self.__contatos.remove(contato)
 
     def get_contato(self, posicao_contato):
-        return self.__contato[posicao_contato]
+        return self.__contatos[posicao_contato]
 
-    def remover_tarefa(self,tarefa):
-        sel.__tarefa.remove(tarefa)
+    def remover_tarefa(self, tarefa):
+        self.__tarefas.remove(tarefa)
 
     def get_tarefa(self, posicao_tarefa):
-        return self.__tarefa[posicao_tarefa]
-
+        return self.__tarefas[posicao_tarefa]
