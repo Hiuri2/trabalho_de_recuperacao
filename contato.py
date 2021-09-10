@@ -29,3 +29,4 @@ class Contato:
 
     def set_cpf(self, cpf):
         self.__cpf = cpf
+
